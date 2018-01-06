@@ -1,1 +1,2 @@
 1.springboot集成mybatis，hibernatedemo
+2.springboot集成redis

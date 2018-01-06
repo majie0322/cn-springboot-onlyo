@@ -1,6 +1,7 @@
 package cn.boot.onlyo.entity;
 
 import java.io.Serializable;
+import java.util.Date;
 
 import javax.persistence.*;
 
@@ -17,6 +18,9 @@ public class Teacher implements Serializable {
 
     @Column
     private String likes;
+
+    @Column
+    private Date regDate;
 
     public Integer getId() {
         return id;
@@ -42,16 +46,39 @@ public class Teacher implements Serializable {
         this.likes = likes;
     }
 
+    public String getLikes() {
+        return likes;
+    }
+
+    public void setLikes(String likes) {
+        this.likes = likes;
+    }
+
+    public Date getRegDate() {
+        return regDate;
+    }
+
+    public void setRegDate(Date regDate) {
+        this.regDate = regDate;
+    }
+
     @Override
     public String toString() {
-        return "Teacher{" + "id=" + id + ", name='" + name + '\'' + ", likes='" + likes + '\'' + '}';
+        return "Teacher{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                ", likes='" + likes + '\'' +
+                ", regDate=" + regDate +
+                '}';
+    }
+
+    public Teacher(String name, String likes, Date regDate) {
+        this.name = name;
+        this.likes = likes;
+        this.regDate = regDate;
     }
 
     public Teacher() {
-    }
 
-    public Teacher(String name, String likes) {
-        this.name = name;
-        this.likes = likes;
     }
 }

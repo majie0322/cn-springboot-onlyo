@@ -11,6 +11,8 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import cn.boot.onlyo.App;
 import org.springframework.test.context.junit4.SpringRunner;
 
+import java.util.Date;
+
 @SpringBootTest
 @RunWith(SpringRunner.class)
 public class TeacherDaoTest {
@@ -21,7 +23,7 @@ public class TeacherDaoTest {
     @Test
     public void test1() {
 
-        Teacher t = new Teacher("mj", "test");
+        Teacher t = new Teacher("mj", "test", new Date());
         teacherDao.save(t);
 
     }
@@ -31,4 +33,13 @@ public class TeacherDaoTest {
         System.out.println(teacherDao.findAll());
     }
 
+    @Test
+    public void test3() {
+        System.out.println(teacherDao.findByNameLike("q"));
+    }
+
+    @Test
+    public void test4() {
+        // teacherDao.
+    }
 }
