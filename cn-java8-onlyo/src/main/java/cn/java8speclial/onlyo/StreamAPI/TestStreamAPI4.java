@@ -64,6 +64,8 @@ public class TestStreamAPI4 {
     public void test8() {
         String str = emps.stream().map(Employee::getName).collect(Collectors.joining(",", "----", "----"));
 
+        String str1 = emps.stream().map(e->e.getAge()+"|"+e.getName()).collect(Collectors.joining("/n","","/n"));
+        System.out.println(str1);
         System.out.println(str);
     }
 }
