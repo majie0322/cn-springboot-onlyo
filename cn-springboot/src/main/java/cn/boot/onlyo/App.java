@@ -11,7 +11,6 @@ import org.springframework.context.annotation.ImportResource;
 @EnableAutoConfiguration
 @ImportResource({ "classpath:spring-shiro.xml" })
 public class App {
-
     public static void main(String[] args) {
         SpringApplication.run(App.class);
     }
