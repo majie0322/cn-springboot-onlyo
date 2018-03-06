@@ -1,5 +1,7 @@
 package cn.java8speclial.onlyo.entity;
 
+import java.util.Objects;
+
 public class Employee {
 
     private Integer id;
@@ -29,28 +31,6 @@ public class Employee {
     }
 
     public Employee() {
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-
-        Employee employee = (Employee) o;
-
-        if (id != null ? !id.equals(employee.id) : employee.id != null) return false;
-        if (name != null ? !name.equals(employee.name) : employee.name != null) return false;
-        if (age != null ? !age.equals(employee.age) : employee.age != null) return false;
-        return salary != null ? salary.equals(employee.salary) : employee.salary == null;
-    }
-
-    @Override
-    public int hashCode() {
-        int result = id != null ? id.hashCode() : 0;
-        result = 31 * result + (name != null ? name.hashCode() : 0);
-        result = 31 * result + (age != null ? age.hashCode() : 0);
-        result = 31 * result + (salary != null ? salary.hashCode() : 0);
-        return result;
     }
 
     @Override
@@ -97,7 +77,24 @@ public class Employee {
         this.salary = salary;
     }
     public enum Status {
-        FREE, BUSY, VOCATION;
+        FREE, BUSY, VOCATION,NONE;
     }
 
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Employee employee = (Employee) o;
+        return Objects.equals(id, employee.id) &&
+                Objects.equals(name, employee.name) &&
+                Objects.equals(age, employee.age) &&
+                Objects.equals(salary, employee.salary) &&
+                status == employee.status;
+    }
+
+    @Override
+    public int hashCode() {
+
+        return Objects.hash(id, name, age, salary, status);
+    }
 }

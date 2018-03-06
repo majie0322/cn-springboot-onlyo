@@ -8,6 +8,7 @@
     <modules>
         <module>cn-springboot</module>
         <module>cn-java8-onlyo</module>
+        <module>cn-javaMode-onlyo</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

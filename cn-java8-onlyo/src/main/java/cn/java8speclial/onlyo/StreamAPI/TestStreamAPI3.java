@@ -8,11 +8,14 @@ import java.util.stream.Collectors;
 
 public class TestStreamAPI3 {
 
-    List<Employee> emps = Arrays.asList(new Employee(102, "李四", 79, 6666.66, Employee.Status.BUSY), new Employee(101,
-            "张三", 18, 9999.99, Employee.Status.FREE), new Employee(103, "王五", 28, 3333.33, Employee.Status.VOCATION),
-            new Employee(104, "赵六", 8, 7777.77, Employee.Status.BUSY), new Employee(104, "赵六", 8, 7777.77,
-                    Employee.Status.FREE), new Employee(104, "赵六", 8, 7777.77, Employee.Status.FREE), new Employee(105,
-                    "田七", 38, 5555.55, Employee.Status.BUSY));
+    List<Employee> emps = Arrays.asList(
+            new Employee(102, "李四", 79, 6666.66, Employee.Status.BUSY),
+            new Employee(101, "张三", 18, 9999.99, Employee.Status.FREE),
+            new Employee(103, "王五", 28, 3333.33, Employee.Status.VOCATION),
+            new Employee(104, "赵六", 8, 7777.77, Employee.Status.BUSY),
+            new Employee(104, "赵六", 8, 7777.77, Employee.Status.FREE),
+            new Employee(104, "赵六", 8, 7777.77, Employee.Status.FREE),
+            new Employee(105, "田七", 38, 5555.55, Employee.Status.BUSY));
 
     // 3. 终止操作
     /*

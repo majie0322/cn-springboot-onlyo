@@ -9,6 +9,12 @@ import java.util.List;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
+
+/**
+ * （1）stream自己不会存储数据
+ * （2）stream不会改变对象，相反，他们会返回一个持有结果的新stream
+ * （3）stream操作是延迟执行的。这意味着他会等到需要结果的时候才会执行
+ */
 public class TestStreamAPI1 {
 
     List<Employee> emps = Arrays.asList(

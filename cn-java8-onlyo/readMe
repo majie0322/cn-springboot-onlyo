@@ -1,0 +1,37 @@
+Java 的并行 API 演变历程基本如下：
+
+1)1.0-1.4 中的 java.lang.Thread
+2)5.0 中的 java.util.concurrent
+3)6.0 中的 Phasers 等
+4)7.0 中的 Fork/Join 框架
+5)8.0 中的 Lambda
+
+
+
+
+二 Stream API
+ 1。筛选与切片 （cn.java8speclial.onlyo.StreamAPI.TestStreamAPI2）
+  filter筛选
+  skip跳过
+  distinct去重
+  limit截断
+
+ 2.映射(cn.java8speclial.onlyo.StreamAPI.TestStreamAPI5)
+ map 接收为lambda 产生一个新的元素
+ flapMap 把每个元素转换成流，然后拼接
+
+ 3 排序cn.java8speclial.onlyo.StreamAPI.TestStreamAPI6
+ sorted()
+ sorted(Comparator or)
+
+ 4 查找与匹配 cn.java8speclial.onlyo.StreamAPI.TestStreamAPI7
+     *  -- allMatch
+     *  -- anyMatch
+     *  -- noneMatch
+     *  -- findFirst
+     *  -- findAny
+     *
+     *  cout
+     *  max
+     *  min
+ 5 归约和收集 cn.java8speclial.onlyo.StreamAPI.TestStreamAPI8
